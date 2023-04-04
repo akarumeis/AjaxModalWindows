@@ -1,0 +1,55 @@
+{% load static %}
+<html lang="en">
+
+<head>
+  <script src="{% static 'js/jQuery.js' %}"></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <title>Films</title>
+</head>
+
+<body class="body">
+  <main>
+    <div class="contain">
+      {% for films in all_films %}
+      <div class="film">
+        <p class="name_film">{{ films.name }}</p>
+        <img class="img_film" src="{{ films.image.url }}"/>
+        <p class="year_film">{{ films.year }}рік</p>
+      </div>
+      {% endfor%}
+    </div>
+
+    <div class="modal_window">
+      <form id="m_form">
+        {% csrf_token %}
+        <div class="close">&Cross;</div>
+        <h1>Будь ласка, дайте відгук нашому сервісу</h1>
+        <p>
+          <input id="name" type="text" name="name" placeholder="Ваше ім'я" required />
+        </p>
+
+        <p>
+          <textarea name="message" id="message" cols="50" rows="3" placeholder="Ваш відгук" required></textarea>
+        </p>
+
+        <p><button class="button">Надіслати</button></p>
+      </form>
+    </div>
+
+    <div class="modal_success">
+      <p>
+      <h3 class="success_text">Дякую за відгук</h3>
+      </p>
+      <div class="close" id="close">&#10004;&#65039;</div>
+    </div>
+
+    <input class="send_letter" hidden value="{% url 'send_letter' %}">
+    <script src="{% static 'js/script.js' %}"></script>
+  </main>
+  
+</body>
+
+</html>

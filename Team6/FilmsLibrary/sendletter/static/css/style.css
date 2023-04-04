@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.modal_window {
+  color: #0f2027;
+  display: none;
+  position: fixed;
+  z-index: 5;
+  width: 500px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  z-index: 6;
+}
+
+.modal_window h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.modal_window input[type="text"],
+.modal_window textarea {
+  border: none;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  width: 100%;
+  max-width: 400px;
+}
+.modal_window button {
+  background-color: #0099ff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px;
+  margin-top: 10px;
+}
+.modal_window button:hover {
+  background-color: #0077cc;
+}
+.modal_window input[type="text"]::placeholder,
+.modal_window textarea::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+body {
+  background-image: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+}
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0)
+  );
+  margin: 2em 0;
+}
+
+.modal_success{
+  color: black;
+  display: none;
+  position: fixed;
+  z-index: 5;
+  width: 200px;
+  height: 50px;
+  background-color: rgba(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.close{
+  cursor: pointer;
+}
+.success_text {
+  cursor:default;
+  margin-right: 10px;
+}
+
+.cover {
+  display: flex;
+  background:rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 4;
+  color: #fff;
+  top: 0;
+  left: 0;
+}
+
+.contain {
+  display: flex;
+  padding: 10px 300px;
+  width: 100%;
+  margin: 0;
+}
+
+.film{
+  border: 3px solid black;  
+  margin-right: 100px;
+  max-width: 1920px;
+  padding: 10px 10px 30px 10px;
+  border-radius: 16px;
+}
+
+
+.img_film{
+  height: 350px;
+}
+
+.name_film{
+  font-size: 17px;
+}
+
+
+.year_film{
+  font-size: 15px;
+}
+
