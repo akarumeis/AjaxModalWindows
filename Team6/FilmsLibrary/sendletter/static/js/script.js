@@ -43,7 +43,6 @@ closeSuccess.addEventListener("click", hideModalSuccess);
 $(".button").click(function (e) {
   e.preventDefault();
   let data = $("#m_form").serializeArray();
-  console.log('.name', '.massage');
   $.ajax({
     url: $(".send_letter").val(),
     type: "POST",
